@@ -124,6 +124,50 @@ Or use the install script:
 }
 ```
 
+### 📋 Check OpenCode Connection Status
+
+**To verify the server is connected:**
+```bash
+opencode mcp list
+```
+
+**Expected output:**
+```
+●  ✓ video-mcp-server  connected
+     python3 -m video_mcp_server.server
+```
+
+### 📖 For Detailed OpenCode Setup
+
+See [OPENCODE_SETUP.md](OPENCODE_SETUP.md) for:
+- Complete installation guide
+- All available tools (10 tools)
+- Usage examples
+- Troubleshooting
+- Test scripts
+
+### Quick Start
+
+1. **Install:**
+```bash
+cd video-mcp-server
+pip3 install --break-system-packages -e .
+```
+
+2. **Configure OpenCode:** Copy the configuration above to `~/.config/opencode/config.json`
+
+3. **Test connection:**
+```bash
+opencode mcp list
+```
+
+4. **Use tools in OpenCode chat:**
+```
+Get information about this video: /path/to/video.mp4
+Download this video: https://youtube.com/watch?v=...
+Analyze this video: /path/to/video.mp4
+```
+
 ## Available Tools
 
 ### FFmpeg-Only Tools (No API Key Required)
