@@ -108,21 +108,36 @@ Or use the install script:
 }
 ```
 
-### Claude Desktop
+### Claude Desktop (Claude Code)
 
+**Configuration file location:**
+- Linux/macOS: `~/.config/Claude/claude_desktop_config.json`
+- Windows: `%APPDATA%\Claude\claude_desktop_config.json`
+
+**Example configuration:**
 ```json
 {
   "mcpServers": {
     "video-mcp-server": {
-      "command": "python",
+      "command": "python3",
       "args": ["-m", "video_mcp_server.server"],
       "env": {
-        "GROQ_API_KEY": "gsk_your_key_here"
+        "GROQ_API_KEY": "YOUR_GROQ_API_KEY_HERE"
       }
+    },
+    "vision-mcp-server": {
+      "command": "python3",
+      "args": ["-m", "vision_mcp_server.server"]
     }
   }
 }
 ```
+
+**See [claude-desktop-config-example.json](claude-desktop-config-example.json) for a complete example.**
+
+**For detailed setup:** See [CLAUDE_SETUP.md](CLAUDE_SETUP.md)
+
+**Note:** For Linux/macOS, use `python3`. For Windows, use `python`.
 
 ### 📋 Check OpenCode Connection Status
 

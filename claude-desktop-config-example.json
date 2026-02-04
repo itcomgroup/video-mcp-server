@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "video-mcp-server": {
+      "command": "python3",
+      "args": ["-m", "video_mcp_server.server"],
+      "env": {
+        "GROQ_API_KEY": "YOUR_GROQ_API_KEY_HERE"
+      }
+    },
+    "vision-mcp-server": {
+      "command": "python3",
+      "args": ["-m", "vision_mcp_server.server"]
+    }
+  }
+}
